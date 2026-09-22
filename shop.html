@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop the range | Bronam</title>
+  <meta name="description" content="Prime, Base, Lock and bundles. Free delivery over ₹999, cash on delivery across India.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="shop">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="announce">Free delivery on orders over ₹999. Cash on delivery across India.</div>
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="logo" href="index.html" aria-label="Bronam home"><span class="logo__box">BRO</span><span class="logo__rest">NAM</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="shop.html" aria-current="page">Shop</a>
+        <a href="index.html#routine">How it works</a>
+        <a href="shade-finder.html">Shade finder</a>
+        <a href="index.html#science">Skin science</a>
+        <a href="about.html">Our story</a>
+        <a href="support.html">Support</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-btn" href="cart.html" data-open-cart aria-label="Bag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 8h14l-1 13H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="cart-count"></span>
+        </a>
+        <button class="icon-btn menu-toggle" data-open-menu aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero on-dark" aria-labelledby="page-title">
+      <div class="wrap">
+        <h1 id="page-title" class="display h1">The range</h1>
+        <p class="lede">Three products and the bundles that put them together. Every order ships within 24 hours.</p>
+      </div>
+    </section>
+    <section class="section section--tight">
+      <div class="wrap">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px">
+          <div class="filters" role="group" aria-label="Filter products" style="margin:0">
+            <button class="filter" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter" data-filter="single" aria-pressed="false">Products</button>
+            <button class="filter" data-filter="bundle" aria-pressed="false">Bundles</button>
+          </div>
+          <p id="shop-count" class="small muted" aria-live="polite"></p>
+        </div>
+        <div class="product-grid mt-6" id="shop-grid"></div>
+        <div class="shop-note">
+          <div><strong>Free delivery over ₹999</strong><span>₹79 below that. Metro cities in 2 to 3 days.</span></div>
+          <div><strong>Cash on delivery</strong><span>Available on every pin code we ship to.</span></div>
+          <div><strong>Free shade exchange</strong><span>Within 30 days, even if you've opened it.</span></div>
+          <div><strong>Secure checkout</strong><span>UPI, cards, netbanking and wallets through Shopify.</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <h2>Tips, launches, no spam.</h2>
+          <p>One email a month. First access to new shades and bundles.</p>
+        </div>
+        <form class="inline-form on-dark" data-newsletter novalidate>
+          <label class="visually-hidden" for="nl-email">Email address</label>
+          <input class="input" id="nl-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          <button class="btn" type="submit">Sign up</button>
+        </form>
+      </div>
+      <div class="footer-links">
+        <div class="footer-brand">
+          <a class="logo" href="index.html" aria-label="Bronam home"><span class="logo__box">BRO</span><span class="logo__rest">NAM</span></a>
+          <p>Makeup for men who'd rather it didn't look like makeup. Made in India.</p>
+        </div>
+        <div>
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="product.html?id=prime">Prime</a></li>
+            <li><a href="product.html?id=base">Base</a></li>
+            <li><a href="product.html?id=lock">Lock</a></li>
+            <li><a href="shop.html?filter=bundle">Bundles</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Learn</h3>
+          <ul>
+            <li><a href="index.html#routine">How it works</a></li>
+            <li><a href="shade-finder.html">Shade finder</a></li>
+            <li><a href="index.html#science">Skin science</a></li>
+            <li><a href="about.html">Our story</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Help</h3>
+          <ul>
+            <li><a href="support.html">Contact us</a></li>
+            <li><a href="support.html#faq">FAQ</a></li>
+            <li><a href="support.html#shipping">Shipping and returns</a></li>
+            <li><a href="cart.html">Your bag</a></li>
+          </ul>
+        </div>
+      </div>
+      <svg class="footer-mark" viewBox="0 0 1000 150" aria-hidden="true" focusable="false">
+        <rect x="0" y="0" width="470" height="150" fill="#fff"/>
+        <text x="40" y="113" textLength="390" lengthAdjust="spacing" font-family="Montserrat, Archivo, sans-serif" font-weight="600" font-size="118" fill="#000">BRO</text>
+        <text x="540" y="113" textLength="455" lengthAdjust="spacing" font-family="Montserrat, Archivo, sans-serif" font-weight="600" font-size="118" fill="#fff">NAM</text>
+      </svg>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Bronam. All prices in INR, inclusive of GST.</span>
+        <nav class="legal" aria-label="Legal"><a href="support.html#policies">Privacy</a><a href="support.html#policies">Terms</a><a href="support.html#shipping">Refunds</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/catalog.js"></script>
+  <script src="assets/js/renders.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages.js"></script>
+</body>
+</html>
