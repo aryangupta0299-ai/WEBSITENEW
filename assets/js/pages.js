@@ -6,7 +6,7 @@
   const B = window.BRONAM;
   const P = window.BRONAM_PRODUCTS;
   const S = window.BRONAM_SHADES;
-  const params = new URLSearchParams(location.search);
+  let params = new URLSearchParams(location.search);
   const SHADE_KEY = "bronam.shade";
 
   function savedShade() {
@@ -78,7 +78,7 @@
         apply(b.dataset.filter);
         const u = new URL(location.href);
         b.dataset.filter === "all" ? u.searchParams.delete("filter") : u.searchParams.set("filter", b.dataset.filter);
-        history.replaceState(null, "", u);
+        try { history.replaceState(null, "", u); } catch (e) { /* sandboxed viewers */ }
       })
     );
     const f = params.get("filter");
@@ -322,7 +322,11 @@
             </div>`).join("")
         : "";
     }
-    document.addEventListener("cart:change", render);
+    const onChange = () => {
+      if (!document.contains(lines)) return document.removeEventListener("cart:change", onChange);
+      render();
+    };
+    document.addEventListener("cart:change", onChange);
     render();
   }
 
@@ -364,8 +368,13 @@
     });
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const page = document.body.dataset.page;
-    ({ home, shop, product, finder, cart: cartPage, support }[page] || (() => {}))();
-  });
+  const inits = { home, shop, product, finder, cart: cartPage, support };
+
+  // Also used by the single-file preview to re-run a page after swapping content.
+  window.BRONAM_INIT_PAGE = function (page, search) {
+    if (search !== undefined) params = new URLSearchParams(search);
+    (inits[page] || (() => {}))();
+  };
+
+  document.addEventListener("DOMContentLoaded", () => window.BRONAM_INIT_PAGE(document.body.dataset.page));
 })();
